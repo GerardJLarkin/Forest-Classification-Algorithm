@@ -1,16 +1,6 @@
 import math
 import pandas
 
-
-def quantify_data(df,playtennis,attr,header):
-    i=0
-    for feature in header[4]:
-        print('beginning with ' + header[i])
-        
-        for each in 
-        if i < 5:
-            i += 1
-
 def ig():
     print('branch: ')
     yes0 = int(input('How many samples in the tree are yes?: '))
@@ -25,12 +15,9 @@ def ig():
     yes2 = int(input('What is the number of yes in the second node?: \n'))
     no2 = int(input('what is the number of no?: \n'))
     total2 = yes2+no2
-    entropy1 = -(yes1/total)*(math.log2(yes1/total)) - 
-                ((no1/total)*(math.log2(no1/total)))
-    entropy2 = -(yes2/total2)*(math.log2(yes2/total2)) - 
-                ((no2/total2)*(math.log2(no2/total2)))
-    entropyafter = (total/total0)*entropy1 + 
-                    (total2/total0)*entropy2
+    entropy1 = -(yes1/total)*(math.log2(yes1/total)) - ((no1/total)*(math.log2(no1/total)))
+    entropy2 = -(yes2/total2)*(math.log2(yes2/total2)) - ((no2/total2)*(math.log2(no2/total2)))
+    entropyafter = (total/total0)*entropy1 + (total2/total0)*entropy2
     ig = entropybefore - entropyafter
     print('[+] Information gain on node: '+str(ig))
 
@@ -45,4 +32,4 @@ def read_data(csv):
     return df,playtennis,attr,header
     quantify_data(attr,playtennis,header,df)
         
-read_data('tennis.csv')
+ig()
