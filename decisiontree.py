@@ -205,10 +205,10 @@ def print_tree(tree, str):
     more readable format than a straight print of the Python dict object.
     """
     if type(tree) == dict:
-        print("%s%s" % (str, tree.keys()[0]))
-        for item in tree.values()[0].keys():
+        print("%s%s" % (str, list(tree.keys())[0]))
+        for item in list(tree.values())[0].keys():
             print("%s\t%s%s" % (str, item, "-\\"))
-            print_tree(tree.values()[0][item], str + "\t\t")
+            print_tree(list(tree.values())[0][item], str + "\t\t")
             print("")
     else: #printing leaves
         print("%s->%s" % (str, tree))
